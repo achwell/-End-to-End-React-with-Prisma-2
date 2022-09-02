@@ -1,8 +1,8 @@
-const Index = () => {
+export default function Home() {
     return (
         <div>
             <p>Index Page</p>
         </div>
-    )
+
+    );
 }
-export default Index

@@ -10,7 +10,10 @@ const {
     BACKEND_ADDRESS
 } = process.env;
 
-module.exports = {
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+    reactStrictMode: true,
+    swcMinify: true,
     publicRuntimeConfig: {
         BACKEND_URL: `${BACKEND_ADDRESS}/api/graphql`,
         CORS_URL: `${BACKEND_ADDRESS}/api/cors`,
@@ -27,3 +30,4 @@ module.exports = {
         cookieSecret: AUTH0_COOKIE
     }
 };
+module.exports = nextConfig
